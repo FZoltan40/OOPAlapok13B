@@ -1,0 +1,8 @@
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\bin\Debug\OOPAlapok.exe.config
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\bin\Debug\OOPAlapok.exe
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\bin\Debug\OOPAlapok.pdb
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.csproj.AssemblyReference.cache
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.csproj.CoreCompileInputs.cache
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.exe
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.pdb
+D:\Desktop\13BBacend\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.exe.config
