@@ -26,6 +26,11 @@ namespace OOPAlapok
             }
         }
 
+        public override string ToString()
+        {
+            return $"A személy neve {_nev} és az életkora {_kor}";
+        }
+
         /*public Szemely(string Nev, int Kor)
         {
             nev = Nev;
@@ -44,7 +49,7 @@ namespace OOPAlapok
             Szemely person = new Szemely();
             person.Nev = "Kiss Ilona";
             person.Kor = 23;
-            Console.WriteLine($"A személy neve: {person.Nev} és {person.Kor} éves.");
+            Console.WriteLine(person);
 
             /*Szemely person = new Szemely("Ilona", 44);
             System.Console.WriteLine(person.Kiir());*/
