@@ -72,6 +72,18 @@ namespace OOPAlapok
     public class Hallgato : Szemely
     {
         private string _neptunkod;
+
+        public string Neptunkod
+        {
+            get { return _neptunkod; }
+            set
+            {
+                if (_neptunkod.Length <= 6)
+                    _neptunkod = value;
+                else
+                    Console.WriteLine("Túl hosszú kód!");
+            }
+        }
         public override string ToString()
         {
             _nev = "Gábor";
@@ -83,7 +95,7 @@ namespace OOPAlapok
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely("István");
+            Szemely person = new Szemely();
             person.Nev = "Kiss Ilona";
             person.Kor = 23;
             Console.WriteLine(person);
