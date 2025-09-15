@@ -4,7 +4,7 @@ namespace OOPAlapok
 {
     public class Szemely
     {
-        private string _nev;
+        protected string _nev;
         private int _kor;
 
         public string Nev
@@ -72,15 +72,24 @@ namespace OOPAlapok
     public class Hallgato : Szemely
     {
         private string _neptunkod;
+        public override string ToString()
+        {
+            _nev = "Gábor";
+            return $"A hallgato neve {_nev}";
+        }
+
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely();
+            Szemely person = new Szemely("István");
             person.Nev = "Kiss Ilona";
             person.Kor = 23;
             Console.WriteLine(person);
+
+            Hallgato student = new Hallgato();
+            Console.WriteLine(student);
 
             /*Szemely person = new Szemely("Ilona", 44);
             System.Console.WriteLine(person.Kiir());*/
