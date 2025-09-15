@@ -8,6 +8,11 @@ namespace OOPAlapok
         protected string _nev;
         private int _kor;
 
+        public Szemely(string nev, int kor)
+        {
+            _nev = nev;
+            Kor = kor;
+        }
         public string Nev
         {
             get { return _nev; } //private adattag kiolvasásához
@@ -74,6 +79,10 @@ namespace OOPAlapok
     {
         private string _neptunkod;
 
+        public Hallgato(string nev, int kor, string neptunkod) : base(nev, kor)
+        {
+            _neptunkod = neptunkod;
+        }
         public string Neptunkod
         {
             get { return _neptunkod; }
@@ -87,8 +96,8 @@ namespace OOPAlapok
         }
         public override string ToString()
         {
-            _nev = "Gábor";
-            return $"A hallgato neve {_nev}";
+
+            return $"A hallgato neve {_nev} életkora {Kor} neptunkódja {_neptunkod}";
         }
 
     }
@@ -96,33 +105,41 @@ namespace OOPAlapok
     {
         private int _ber;
 
+        public Dolgozo(string nev, int kor, int ber) : base(nev, kor)
+        {
+            _ber = ber;
+        }
+
         public override string ToString()
         {
-            _nev = "Ilona";
-            return $"A dolgozó neve {_nev}";
+            return $"A hallgato neve {_nev} életkora {Kor} neptunkódja {_ber}";
         }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely();
-            person.Nev = "Kiss Ilona";
-            person.Kor = 23;
-            Console.WriteLine(person);
+            /*Szemely person = new Szemely("Kiss Ilona", 23);
+            Console.WriteLine(person);*/
 
-            Hallgato student1 = new Hallgato();
-            Console.WriteLine(student1);
+            Hallgato student = new Hallgato("Kiss Gábor", 33, "neptun1");
+            Console.WriteLine(student);
+
+            Dolgozo worker = new Dolgozo("Toth Gábor", 25, 33000);
+            Console.WriteLine(worker);
 
             List<Hallgato> studentList = new List<Hallgato>();
             for (int i = 0; i < 3; i++)
             {
-                Hallgato student2 = new Hallgato();
+
                 Console.Write($"Kérem a(z) {i + 1} hallgató nevét:");
-                student2.Nev = Console.ReadLine();
+                string nev = Console.ReadLine();
                 Console.Write($"Kérem a(z) {i + 1} hallgató életkorát:");
-                student2.Kor = int.Parse(Console.ReadLine());
-                studentList.Add(student2);
+                int kor = int.Parse(Console.ReadLine());
+                Console.Write($"Kérem a(z) {i + 1} hallgató életkorát:");
+                string neptun = Console.ReadLine();
+                Hallgato std = new Hallgato(nev, kor, neptun);
+                studentList.Add(std);
 
             }
 
@@ -131,8 +148,8 @@ namespace OOPAlapok
                 Console.WriteLine(item.Nev);
             }
 
-            Dolgozo worker = new Dolgozo();
-            Console.WriteLine(worker);
+            //Dolgozo worker = new Dolgozo();
+            //Console.WriteLine(worker);
 
             /*Szemely person = new Szemely("Ilona", 44);
             System.Console.WriteLine(person.Kiir());*/
