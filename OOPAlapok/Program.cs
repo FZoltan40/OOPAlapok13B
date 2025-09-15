@@ -42,6 +42,32 @@ namespace OOPAlapok
             return $"A személy neve: {nev} és életkora: {kor}";
         }*/
     }
+
+    public class Bankszamla
+    {
+        private int _egyeneleg;
+
+        public int Egyenleg
+        {
+            get { return _egyeneleg; }
+            set
+            {
+                if (value > 0)
+                    _egyeneleg = value;
+                else
+                    Console.WriteLine("Egyenleg nem lehet nulla!");
+            }
+        }
+        public void Betesz()
+        {
+
+        }
+
+        public void Kivesz()
+        {
+
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
